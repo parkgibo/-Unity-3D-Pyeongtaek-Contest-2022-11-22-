@@ -187,9 +187,31 @@ public class unity20220629 : MonoBehaviour
             Debug.Log("나와바리 몬스터 :" + Mmonster);
         }*/
 
+        //health = Heal(health);
+
+        /*} // 전역변수 
         //7. 함수(메소드)
+        // 기능을 편리하게 사용하도록 구성된 영역
+        int Heal(int currentHealth) 
+        {
+            currentHealth += 10;
+            Debug.Log("힐을 받음" + currentHealth);
+            //return : 함수가 값을 반환할때 사용
+            return currentHealth;
+        }
+
+        // 지역변수 : 함수 안에서 선언된 변수
+        // 전역변수 : 함수 바깥에 선언된 변수
+        */
 
 
+        //8.클래스
+        //클래스 : 하난의 사물(오브젝트)와 대응하는 로직
+        //class : 클래스 선언에 사용
+        //인스턴스 : 정의된 클래스를 변수 초기화로 실체화
+        //private : 외부 클래스에 비공개로 설정하는 접근자
+        //public : 외부 클래스에 공개로 설정하는 접근자
+        //MonoBehavoir : 유니티 게임 오브젝트 클래스
     }
-
 }
+//자료) 유니티 C# 프로그래밍 기초. 한방에 정리하기 [유니티 입문 강좌 B4]
