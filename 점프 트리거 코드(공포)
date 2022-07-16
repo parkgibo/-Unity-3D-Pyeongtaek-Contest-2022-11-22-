@@ -1,0 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Jumpscare : MonoBehaviour
+{
+
+    // 세 개의 공개 클래스가 필요
+    // 하나는 이미지 생성에 하나는 사운드 효과 또는 하나는 트리거용으로 필요
+    public GameObject Ghost; //유령 객채 생성
+    public AudioSource JumpSound; //오디오 생성
+    public GameObject Jumptrigger; // 객체 트리거 생성
+
+    void OnTriggerEnter()
+    {
+        StartCoroutine(ScareArea()); // 트리거 시작
+    }
+    IEnumerator ScareArea()
+    {
+        JumpSound.Play(); //jumpsoun가 play 될경우
+        Ghost.SetActive(true); //유령 소환
+        Jumptrigger.SetActive(false); // 점프트리거 실행
+        yield return new WaitForSeconds(2); // 2초동안 객체 소환
+        Ghost.SetActive(false); // 유령 사라짐(아마도?)
+    }
+}
