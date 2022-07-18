@@ -1,0 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Enemy1 : interactable
+{
+    public override void interact()
+    {
+        base.intercat();
+    }
+}
