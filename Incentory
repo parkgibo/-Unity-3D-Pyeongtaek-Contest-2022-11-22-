@@ -1,0 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Incentory : MonoBehaviour
+{
+
+    public GameObject inventorypanel;
+    bool activeInventory = false;
+
+    
+    private void Start()
+    {
+        inventorypanel.SetActive(activeInventory);
+    }
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            activeInventory = !activeInventory;
+            inventorypanel.SetActive(activeInventory);
+        }
+    }
+    
+    
+    
+}
