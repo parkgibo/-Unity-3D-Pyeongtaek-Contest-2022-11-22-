@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemDatabase : MonoBehaviour
+public class ItemDatabase : MonoBehaviour //아이템 데이터 베이스
 {
     public static ItemDatabase instance;
     private void Awake()
