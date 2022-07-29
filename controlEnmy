@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ControlEnemy : MonoBehaviour
+public class ControlEnemy : MonoBehaviour // 적 AI코드 (실패)
 {
 
     public float lookRadius = 10f;
