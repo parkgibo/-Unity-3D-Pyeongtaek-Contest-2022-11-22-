@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Jumpscare : MonoBehaviour
+public class Jumpscare : MonoBehaviour //점프 스캐어 
 {
 
     // 세 개의 공개 클래스가 필요
