@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ItemType
+public enum ItemType //아이템 설정(에셋이나 플레이어 코드에 추가하는 것이 아님)
 {
     Equipment,
     Consumables,
