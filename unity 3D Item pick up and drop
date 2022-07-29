@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Itemdrop : MonoBehaviour
+public class Itemdrop : MonoBehaviour //아이템 줍기()
 {
     public ProjectileGun gunscript;
     public Rigidbody rb;
