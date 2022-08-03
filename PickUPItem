@@ -1,0 +1,60 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+
+public class ItemPickUP : MonoBehaviour
+{
+    public GameObject Player;
+    public GameObject PickUpItem;
+    public GameObject inventory;
+    public GameObject PickUpTEXT;
+
+
+    public bool inRech;
+
+
+    private void Start()
+    {
+        PickUpItem.SetActive(false);
+        inventory.SetActive(true);
+        PickUpTEXT.SetActive(false);
+
+        inRech = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Reach")
+        {
+            inRech = true;
+            PickUpTEXT.SetActive(true);
+        }
+
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.tag == "Reach")
+        {
+            inRech = false;
+            PickUpTEXT.SetActive(false);
+        }
+    }
+    private void Update()
+    {
+        if(Input.GetButtonDown("Interact") && inRech)
+        {
+            PickUpItem.SetActive(true);
+            inventory.SetActive(false);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
+
+    public void Exitbutton()
+    {
+        PickUpItem.SetActive(false);
+        inventory.SetActive(true);
+    }
+}
