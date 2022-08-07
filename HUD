@@ -1,0 +1,63 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class HUD : MonoBehaviour
+{
+    public GameObject FlashON; //플레시 on/off
+    public GameObject FlashOFF;
+    public GameObject flashOB; //플레시 객체
+
+    public GameObject wepon1; 
+    public GameObject wepon1OB; //무기 객체
+
+    public GameObject wepon2;
+    public GameObject wepon2OB;
+
+    public GameObject wepon3;
+    public GameObject wepon3OB;
+
+
+    private void Start()
+    {
+        FlashON.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if(flashOB.activeInHierarchy)
+        {
+            FlashON.SetActive(true);
+            FlashOFF.SetActive(false);
+        }
+        else
+        {
+            FlashON.SetActive(false);
+            FlashOFF.SetActive(true);
+        }
+        if(wepon1OB.activeInHierarchy)
+        {
+            wepon1.SetActive(true);
+        }
+        else
+        {
+            wepon1.SetActive(false);
+        }
+        if (wepon2OB.activeInHierarchy)
+        {
+            wepon2.SetActive(true);
+        }
+        else
+        {
+            wepon2.SetActive(false);
+        }
+        if (wepon3OB.activeInHierarchy)
+        {
+            wepon3.SetActive(true);
+        }
+        else
+        {
+            wepon3.SetActive(false);
+        }
+    }
+}
